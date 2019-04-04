@@ -4,12 +4,12 @@ library(dplyr)
 
 #Download UCI data files from the web, unzip them, and specify time/date settings
 URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-destFile <- "CourseDataset.zip"
-if (!file.exists(destFile)){
-  download.file(URL, destfile = destFile, mode='wb')
+File <- "CourseDataset.zip"
+if (!file.exists(File)){
+  download.file(URL, file = File, mode='wb')
 }
 if (!file.exists("./UCI_HAR_Dataset")){
-  unzip(destFile)
+  unzip(File)
 }
 dateDownloaded <- date()
 
